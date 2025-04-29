@@ -33,7 +33,7 @@ if (!$isBot) {
 
 // Nếu phát hiện là bot, redirect về news.php
 if ($isBot) {
-    header("Location: https://bestweathertv.online/news.php");
+    header("Location: https://bestweathertv.online/");
     exit();
 }
 
@@ -71,12 +71,12 @@ if ($response) {
 
     if ($country !== "US" || $isProxy === true) {
         // Nếu không phải IP US hoặc đang dùng VPN/Proxy ➔ Redirect
-        header("Location: https://bestweathertv.online/news.php");
+        header("Location: https://bestweathertv.online/");
         exit();
     }
 } else {
     // Nếu API lỗi ➔ Cũng redirect về news.php
-    header("Location: https://bestweathertv.online/news.php");
+    header("Location: https://bestweathertv.online/");
     exit();
 }
 ?>
